@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OPA Calculation</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container mt-5">
+    <h1 class="text-center mb-4">Officer Performance Assessment (OPA)</h1>
+    <div class="row">
+      <div class="col-md-6">
+        <form id="opaForm">
+            <div class="col-md-6">
+                <h3>Result :</h3>
+                <div id="result" class="mt-4"></div>
+              </div>
+            </div>
+            
+          <!-- Duty Time -->
+          <div class="mb-3">
+            <label for="dutyTime" class="form-label">Duty Time (Minutes per Week)</label>
+            <input type="number" class="form-control" id="week1" placeholder="Week 1" required>
+            <input type="number" class="form-control mt-2" id="week2" placeholder="Week 2" required>
+            <input type="number" class="form-control mt-2" id="week3" placeholder="Week 3" required>
+            <input type="number" class="form-control mt-2" id="week4" placeholder="Week 4" required>
+          </div>
+          <!-- Incident Report -->
+          <div class="mb-3">
+            <label for="incidentReport" class="form-label">Incident Report (Total Posts)</label>
+            <input type="number" class="form-control" id="incidentReport" required>
+          </div>
+          <!-- Field Activity Report -->
+          <div class="mb-3">
+            <label for="fieldActivity" class="form-label">Field Activity Report (Day Posted)</label>
+            <select class="form-select" id="fieldActivityWeek1" required>
+              <option value="5">Saturday</option>
+              <option value="4">Sunday Afternoon</option>
+              <option value="3">Sunday Evening</option>
+              <option value="2">Monday</option>
+              <option value="1">Tuesday</option>
+            </select>
+            <select class="form-select mt-2" id="fieldActivityWeek2" required>
+              <option value="5">Saturday</option>
+              <option value="4">Sunday Afternoon</option>
+              <option value="3">Sunday Evening</option>
+              <option value="2">Monday</option>
+              <option value="1">Tuesday</option>
+            </select>
+            <select class="form-select mt-2" id="fieldActivityWeek3" required>
+              <option value="5">Saturday</option>
+              <option value="4">Sunday Afternoon</option>
+              <option value="3">Sunday Evening</option>
+              <option value="2">Monday</option>
+              <option value="1">Tuesday</option>
+            </select>
+            <select class="form-select mt-2" id="fieldActivityWeek4" required>
+              <option value="5">Saturday</option>
+              <option value="4">Sunday Afternoon</option>
+              <option value="3">Sunday Evening</option>
+              <option value="2">Monday</option>
+              <option value="1">Tuesday</option>
+            </select>
+          </div>
+          <!-- Officer Activity -->
+          <div class="mb-3">
+            <label for="officerActivity" class="form-label">Officer Activity (Warrant/Vehicle Posts)</label>
+            <input type="number" class="form-control" id="officerActivity" required>
+          </div>
+          <!-- Ticket Record -->
+          <div class="mb-3">
+            <label for="ticketRecord" class="form-label">Ticket Record (Total Tickets)</label>
+            <input type="number" class="form-control" id="ticketRecord" required>
+          </div>
+          <!-- Division Activity -->
+          <div class="mb-3">
+            <label for="divisionActivity" class="form-label">Division Activity (Supervisor Score 1-5)</label>
+            <input type="number" class="form-control" id="divisionActivity" min="0" max="5" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="officerRank" class="form-label">Officer Rank</label>
+            <select class="form-select" id="officerRank" required>
+              <option value="1">Police Officer I</option>
+              <option value="2">Police Officer II+</option>
+            </select>
+          </div>
+          <!-- Button -->
+          <button type="submit" class="btn btn-primary">Calculate OPA</button>
+        </form>
+      </div>
+      <h6 class= text-center>Developer - C.Francisca / KY</h6>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
